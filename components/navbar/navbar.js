@@ -49,7 +49,6 @@ export default function Navbar () {
         </Nav.Link>
         <Nav.Link
           href="/cart"
-          passHref
           style={{
             display:'flex',
             flexDirection:'row',

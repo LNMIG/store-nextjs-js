@@ -5,7 +5,14 @@ import Card from 'react-bootstrap/Card'
 
 export default function Layout({ children }) {
   return (
-    <Card.Title>
+    <Card.Title
+      style={{
+        display: 'flex',
+        flexDirection:'column',
+        justifyContent: 'center',
+        height: '80%'
+      }}
+    >
 {/*-------------------------------------------*/}
       <Card.Header
         style={{
@@ -20,7 +27,7 @@ export default function Layout({ children }) {
 
 {/*-------------------------------------------*/}
 
-        { children }
+          { children }
 
 {/*-------------------------------------------*/}
 

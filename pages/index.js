@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react"
 import Layout from "@components/layout/layout"
 import Header from "@components/header/header"
+import ProductList from "@components/productList/productList"
 import Head from 'next/head'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from "react-bootstrap/Card"
-//import styles from '../styles/Home.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function HomePage () {
   
-  const [productsList, setProductList] = useState([])
+  const [productsList, setProductsList] = useState([])
 
-  // useEffect (() => {
-  //     fetch('/api/avo')
-  //     .then(response => response.json())
-  //     .then(response => setProductList(response.data))
-  // }, [])
+  useEffect (() => {
+      fetch('/api/avo')
+      .then(response => response.json())
+      .then(response => setProductsList(response.data))
+  }, [])
 
   return (
     <div
@@ -41,7 +41,7 @@ export default function HomePage () {
       >
         <Layout>
           <Header/>
-          {/* <ProductList products={productsList}/> */}
+          <ProductList products={productsList}/>
         </Layout>
       </Card>
     </div>
