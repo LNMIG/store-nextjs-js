@@ -1,13 +1,48 @@
 import React from 'react'
 import Navbar from '@components/navbar/navbar'
 import Footer from '@components/footer/footer'
+import Card from 'react-bootstrap/Card'
 
 export default function Layout({ children }) {
   return (
-    <>
-      <Navbar />
+    <Card.Title>
+{/*-------------------------------------------*/}
+      <Card.Header
+        style={{
+          borderTopLeftRadius:'1.25rem',
+          borderTopRightRadius:'1.25rem'
+        }}
+      >
+
+        <Navbar />
+
+      </Card.Header>
+
+{/*-------------------------------------------*/}
+
         { children }
-      <Footer />
-    </>
+
+{/*-------------------------------------------*/}
+
+      <Card.Footer
+        style={{
+          borderBottomLeftRadius:'1.25rem',
+          borderBottomRightRadius:'1.25rem',
+          position:'absolute',
+          bottom:'0rem',
+          left:'0rem',
+          right:'0rem',
+        }}
+      >
+
+{/*-------------------------------------------*/}
+
+        <Footer />
+
+{/*-------------------------------------------*/}
+
+      </Card.Footer>
+
+    </Card.Title>
   )
 }
