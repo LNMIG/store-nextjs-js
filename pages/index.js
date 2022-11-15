@@ -35,7 +35,7 @@ export default function HomePage () {
         style={{
           width: '60rem',
           height: '100vh',
-          border:'1px solid black',
+          border:'none',
           position:'relative',
         }}
       >

@@ -5,10 +5,11 @@ import Nav from 'react-bootstrap/Nav'
 
 const ProductList = ({ products }) => {
   return (
-    <Carousel style={{ height: '100%' }} variant='dark' fade interval={1000}>
+    <Carousel style={{ height: '100%' }} variant='dark' slide={false} fade>
       {products.length > 0
         ? products.map(({ id, name, image, price }) => (
           <Carousel.Item key={id}
+            interval={1500}
             style={{
               display: 'flex',
               flexDirection: 'row',
