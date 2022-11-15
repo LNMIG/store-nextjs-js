@@ -4,13 +4,14 @@ import Nav from 'react-bootstrap/Nav'
 
 export default function Footer () {
   return (
-    <Card.Title 
+    <Card.Title class='container-sm'
       style={{
         padding:'1rem 1rem 0rem 1rem',
         display:'flex',
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'flex-start',
+        flexWrap:'nowrap',
       }}
     >
       <Card.Text

@@ -22,6 +22,7 @@ export default function Navbar () {
           flexDirection:'row',
           justifyContent:'space-between',
           alignItems:'center',
+          flexWrap:'nowrap',
           gap:'2rem'
         }}
       >
@@ -32,6 +33,7 @@ export default function Navbar () {
             flexDirection:'row',
             justifyContent:'center',
             alignItems:'center',
+            flexWrap:'nowrap',
             gap:'0.5rem'
           }}
         >
@@ -54,6 +56,7 @@ export default function Navbar () {
             flexDirection:'row',
             justifyContent:'center',
             alignItems:'center',
+            flexWrap:'nowrap',
             gap:'0.75rem'
           }}
         >

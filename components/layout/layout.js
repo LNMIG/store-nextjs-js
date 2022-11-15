@@ -9,7 +9,7 @@ export default function Layout({ children }) {
       style={{
         display: 'flex',
         flexDirection:'column',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         height: '80%'
       }}
     >
@@ -42,11 +42,7 @@ export default function Layout({ children }) {
         }}
       >
 
-{/*-------------------------------------------*/}
-
         <Footer />
-
-{/*-------------------------------------------*/}
 
       </Card.Footer>
 
