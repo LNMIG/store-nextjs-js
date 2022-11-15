@@ -5,31 +5,31 @@ import Table from 'react-bootstrap/Table'
 
 export default function ProductAttributes({ description, ...otherAttributes }) {
   return (
-    <Card style={{border:'none'}}>
+    <Card style={{ border: 'none' }}>
       <Card.Header
         style={{
           backgroundColor: 'transparent',
-          
+
         }}
       >
 
         <h5>About this avocado</h5>
         <p
           style={{
-            fontSize:'1rem',
-            fontWeight:'400',
-            textAlign:'justify'
+            fontSize: '1rem',
+            fontWeight: '400',
+            textAlign: 'justify'
           }}
         >
           {description}
         </p>
       </Card.Header>
 
-      <Card responsive='sm' size='sm' style={{ marginTop:'20px', fontSize:'1.25rem' }}>
+      <Card responsive='sm' size='sm' style={{ marginTop: '20px', fontSize: '1.25rem' }}>
 
         <Card.Header> Attributes </Card.Header>
 
-        <Table borderless hover style={{ fontSize:'1rem', fontWeight:'400', marginLeft:'0.5rem'}}>
+        <Table borderless hover style={{ fontSize: '1rem', fontWeight: '400', marginLeft: '0.5rem' }}>
           <tbody>
             <tr>
               <td>Shape</td><td>{otherAttributes.shape}</td>
