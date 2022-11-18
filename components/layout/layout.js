@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         display: 'flex',
         flexDirection:'column',
         justifyContent: 'space-between',
-        height: '80%'
+        height: 'auto'
       }}
     >
 {/*-------------------------------------------*/}
@@ -35,10 +35,11 @@ export default function Layout({ children }) {
         style={{
           borderBottomLeftRadius:'1.25rem',
           borderBottomRightRadius:'1.25rem',
-          position:'absolute',
-          bottom:'0rem',
-          left:'0rem',
-          right:'0rem',
+          marginTop:'1rem',
+          // position:'absolute',
+          // bottom:'0rem',
+          // left:'0rem',
+          // right:'0rem',
         }}
       >
 
