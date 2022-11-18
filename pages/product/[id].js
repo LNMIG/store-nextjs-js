@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import Card from 'react-bootstrap/Card'
 import Layout from '@components/layout/layout'
 import ProductSummary from '@components/productSummary/productSummary'
-import Header from '@components/header/header'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const ProductPage = () => {
