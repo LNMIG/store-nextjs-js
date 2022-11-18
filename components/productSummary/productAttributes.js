@@ -1,17 +1,11 @@
 import React from "react"
-import { ListGroup } from "react-bootstrap"
 import Card from 'react-bootstrap/Card'
 import Table from 'react-bootstrap/Table'
 
 export default function ProductAttributes({ description, ...otherAttributes }) {
   return (
     <Card style={{ border: 'none' }}>
-      <Card.Header
-        style={{
-          backgroundColor: 'transparent',
-
-        }}
-      >
+      <Card.Header style={{ backgroundColor: 'transparent', }}>
 
         <h5>About this avocado</h5>
         <p
