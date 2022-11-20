@@ -2,19 +2,38 @@ import Layout from '@components/layout/layout'
 import CartItemList from '@components/cartItemList/cartItemList'
 import CartSummary from '@components/cartSummary/cartSummary'
 import { useCart, useCartMutations } from '@store'
-
+import Card from 'react-bootstrap/Card'
 import 'bootstrap/dist/css/bootstrap.css'
+
+const card = {
+  width: '60rem',
+  height: '100vh',
+  border: 'none',
+  position: 'relative',
+}
+
+const divContainer = {
+  display: "flex",
+  justifyContent: 'center',
+  alignItems: 'center',
+}
 
 const CartPage = () => {
   const { items, count } = useCart()
   const { removeFromCart } = useCartMutations()
 
   return (
-    <Layout>
-      <CartItemList items={items} removeFromCart={removeFromCart} />
-      <br/>
-      <CartSummary totalAmount={count} />
-    </Layout>
+    <div className='container' style={divContainer}>
+      <Card style={card} >
+        <Layout>
+          <div className='d-flex flex-column' style={{minHeight:'70%'}}>
+            <CartItemList items={items} removeFromCart={removeFromCart} />
+            <hr />
+            <CartSummary totalAmount={count} />
+          </div>
+        </Layout>
+      </Card>
+    </div>
   )
 }
 
