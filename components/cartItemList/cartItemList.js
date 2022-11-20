@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Card from 'react-bootstrap/Card'
+import Alert from 'react-bootstrap/Alert'
 
 const CartItemList = ({ items, removeFromCart, loading = false}) => {
   if (loading) {
@@ -14,12 +15,12 @@ const CartItemList = ({ items, removeFromCart, loading = false}) => {
 
   if (items.length === 0)
     return (
-      <Card>
-        <Card.Header>Your cart is empty</Card.Header>
-        <p>
+      <Alert variant='danger' className='mt-4 mb-0'>
+        <Alert.Heading>Your cart is empty</Alert.Heading>
+        <p className='mb-0'>
           You will need to add some items to the cart before you can checkout.
         </p>
-      </Card>
+      </Alert>
     )
 
   const mapCartItemsToItems = (items) =>

@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         display: 'flex',
         flexDirection:'column',
         justifyContent: 'space-between',
-        height: 'auto'
+        minHeight: '100vh',
       }}
     >
 {/*-------------------------------------------*/}

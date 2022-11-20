@@ -1,15 +1,12 @@
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 const CartSummary = ({ totalAmount }) => {
   return (
-    <div size="large" as="section">
-      <span>
-        <strong>Sub total:</strong>
-        {` ${totalAmount}`}
-      </span>
-      <butto color="black" floated="right">
-        Check out
-      </butto>
-    </div>
+    <Card className='d-flex flex-row px-3 align-items-center'>
+      <Card.Body className='px-0' style={{height:'4rem'}}>Sub total: $ {` ${totalAmount}`}</Card.Body>
+      <Button className='btn-success fs-5' style={{width:'8rem', height:'3rem'}}> Check out </Button>
+    </Card>
   )
 }
 
