@@ -4,6 +4,7 @@ import CartSummary from '@components/cartSummary/cartSummary'
 import { useCart, useCartMutations } from '@store'
 import Card from 'react-bootstrap/Card'
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const card = {
   width: '60rem',

@@ -3,7 +3,7 @@ import React, { Dispatch, useContext, useReducer } from 'react'
 const defaultState = {}
 
 const CartItemsContext = React.createContext(defaultState)
-const CartDispatchContext = React.createContext((() => Dispatch))
+const CartDispatchContext = React.createContext(Dispatch)
 
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducers, defaultState)
@@ -96,12 +96,13 @@ export const useCart = () => {
 export const useCartMutations = () => {
   const dispatch = useContext(CartDispatchContext)
 
-  const addToCart = (product, quantity) =>
+  const addToCart = (product, quantity) => {
+    console.log(dispatch)
     dispatch({
       type: 'add',
       item: product,
       quantity,
-    })
+    })}
 
   const removeFromCart = (product) =>
     dispatch({

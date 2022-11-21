@@ -3,7 +3,8 @@ import { useRouter } from 'next/router'
 import Card from 'react-bootstrap/Card'
 import Layout from '@components/layout/layout'
 import ProductSummary from '@components/productSummary/productSummary'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const ProductPage = () => {
   const { query } = useRouter()

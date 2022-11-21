@@ -1,6 +1,7 @@
 import React from "react"
 import Card from 'react-bootstrap/Card'
 import ProductAttributes from "./productAttributes"
+import AddToCart from './addToCart'
 
 const card ={
   height: '80%',
@@ -64,6 +65,8 @@ export default function ProductSummary({ product }) {
           <Card.Text style={text2}>
             {`SKU: ${product.sku}`}
           </Card.Text>
+
+          <AddToCart product={product}/>
 
         </Card.Body>
       </div>

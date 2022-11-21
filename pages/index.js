@@ -4,7 +4,8 @@ import Header from "@components/header/header"
 import ProductList from "@components/productList/productList"
 import Head from 'next/head'
 import Card from "react-bootstrap/Card"
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default function HomePage () {
   
