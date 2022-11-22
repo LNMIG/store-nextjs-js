@@ -18,7 +18,7 @@ const cardText = {
 
 const navLink = {
   padding:'0.75rem 0rem',
-  color:'#00bbf0',
+  color:'#8109b7',
   fontSize:'0.85rem'
 }
 
@@ -42,7 +42,7 @@ export default function Footer () {
           Desarrollar habilidades en el uso de 
 
           <Nav.Link href='https://nextjs.org/'  target='_blank'
-            style={{ fontSize:'0.85rem', color:'#00bbf0',
+            style={{ fontSize:'0.85rem', color:'#8109b7',
             }}
           >
             Next Js

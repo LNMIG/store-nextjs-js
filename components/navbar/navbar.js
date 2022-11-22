@@ -40,7 +40,7 @@ export default function Navbar () {
             <Image
               src={avocadoIcon}
               alt='avocado image'
-              width={40}
+              width={32}
               height={40}
               style={imageStyle}
             />
