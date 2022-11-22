@@ -8,7 +8,7 @@ import Card from "react-bootstrap/Card"
 // import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export const getServerSideProps = async () => {
-  const response = await fetch('https://platzi-avo.vercel.app/api/avo')
+  const response = await fetch('https://store-with-nextjs.vercel.app/api/avo')
   const { data: productsList } = await response.json()
   return { props: { productsList} }
 }
