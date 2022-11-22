@@ -1,9 +1,9 @@
-import React, { Dispatch, useContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer } from 'react'
 
 const defaultState = {}
 
-const CartItemsContext = React.createContext(defaultState)
-const CartDispatchContext = React.createContext(Dispatch)
+const CartItemsContext = createContext(null)
+const CartDispatchContext = createContext(null)
 
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducers, defaultState)
@@ -93,15 +93,15 @@ export const useCart = () => {
     subTotal,
   }
 }
+
 export const useCartMutations = () => {
-  const dispatch = useContext(CartDispatchContext)
+  const dispatch = useContext(CartDispatchContext);
 
   const addToCart = (product, quantity) => {
-    console.log(dispatch)
     dispatch({
       type: 'add',
       item: product,
-      quantity,
+      quantity: quantity,
     })}
 
   const removeFromCart = (product) =>

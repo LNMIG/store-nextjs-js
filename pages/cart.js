@@ -3,8 +3,8 @@ import CartItemList from '@components/cartItemList/cartItemList'
 import CartSummary from '@components/cartSummary/cartSummary'
 import { useCart, useCartMutations } from '@store'
 import Card from 'react-bootstrap/Card'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const card = {
   width: '60rem',
@@ -22,7 +22,7 @@ const divContainer = {
 const CartPage = () => {
   const { items, count } = useCart()
   const { removeFromCart } = useCartMutations()
-
+  console.log(items)
   return (
     <div className='container' style={divContainer}>
       <Card style={card} >

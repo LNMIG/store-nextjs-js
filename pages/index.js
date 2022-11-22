@@ -4,18 +4,24 @@ import Header from "@components/header/header"
 import ProductList from "@components/productList/productList"
 import Head from 'next/head'
 import Card from "react-bootstrap/Card"
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-icons/font/bootstrap-icons.css'
 
-export default function HomePage () {
+export const getServerSideProps = async () => {
+  const response = await fetch('https://platzi-avo.vercel.app/api/avo')
+  const { data: productsList } = await response.json()
+  return { props: { productsList} }
+}
+
+export default function HomePage ({ productsList }) {
   
-  const [productsList, setProductsList] = useState([])
+  // const [productsList, setProductsList] = useState([])
 
-  useEffect (() => {
-      fetch('/api/avo')
-      .then(response => response.json())
-      .then(response => setProductsList(response.data))
-  }, [])
+  // useEffect (() => {
+  //     fetch('/api/avo')
+  //     .then(response => response.json())
+  //     .then(response => setProductsList(response.data))
+  // }, [])
 
   return (
     <div
