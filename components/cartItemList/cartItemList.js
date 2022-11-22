@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Alert from 'react-bootstrap/Alert'
 
 const CartItemList = ({ items, removeFromCart, loading = false}) => {
+
   if (loading) {
     return (
     <div className='d-flex justify-content-center'>

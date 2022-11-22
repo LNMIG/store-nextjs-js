@@ -35,9 +35,9 @@ export default function Footer () {
         <Nav.Link href='/' style={navLink}> Todos los productos </Nav.Link>
       </Card.Text>
 
-      <Card.Text style={cardText}>
+      <Card.Text className='d-flex flex-column' style={cardText}>
         Hecho para
-        <div 
+        <span 
           style={{...navLink, color:'black', lineHeight:'160%'}}>
           Desarrollar habilidades en el uso de 
 
@@ -47,7 +47,7 @@ export default function Footer () {
           >
             Next Js
           </Nav.Link>
-        </div>
+        </span>
       </Card.Text>
     </Card.Title>
 )

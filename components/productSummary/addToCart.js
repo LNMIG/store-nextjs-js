@@ -21,15 +21,10 @@ const AddToCart = ({ product }) => {
   }
 
   const handleSubmit = () => {
-        console.log('Esta es la cantidad: ',quantity)
-        console.log(visible)
-        console.log(addToCart(product, quantity))
         addToCart(product, quantity)
         setQuantity(quantity)
         setVisible(true)
         toggleMessage('ok')
-
-
   }
 
   const handleChange = ({ target }) => {

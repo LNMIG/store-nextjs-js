@@ -1,13 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-import Card from 'react-bootstrap/Card'
 import Nav from 'react-bootstrap/Nav'
+import Card from 'react-bootstrap/Card'
 
+import { useCart } from '@store'
 import avocadoIcon from '@public/avocado.jpg'
 import shoppingCartIcon from '@public/sesta.jpg'
-import { useCart } from '@store'
 
 const cardTitle = {
   padding:'1rem 1rem',
@@ -34,9 +32,7 @@ const navLinkStyle = {
 
 
 export default function Navbar () {
-  const { pathname } = useRouter()
   const { count: cartCount } = useCart()
-  // const cartCount = 0
 
   return (
       <Card.Title style={cardTitle}>
