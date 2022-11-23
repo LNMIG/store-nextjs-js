@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import Nav from 'react-bootstrap/Nav'
+import Link from 'next/link'
+import { BLOCKED_PAGES } from 'next/dist/shared/lib/constants'
 
 const cardTitle = {
   padding:'1rem 1rem 0rem 1rem',
@@ -13,40 +14,42 @@ const cardTitle = {
 
 const cardText = {
   fontSize:'1.15rem',
-  fontWeight:'500',
+  fontWeight:'700',
 }
 
 const navLink = {
   padding:'0.75rem 0rem',
+  textDecoration: 'none',
   color:'#8109b7',
-  fontSize:'0.85rem'
+  fontSize:'0.85rem',
+  fontWeight: 'bold',
 }
 
 export default function Footer () {
   return (
     <Card.Title className='container-sm' style={cardTitle}>
-      <Card.Text style={cardText}>
+      <Card.Text className='d-flex flex-column' style={cardText}>
         Nosotros
-        <Nav.Link href='/about' style={navLink}> Conoce más </Nav.Link>
+        <Link href='/about' style={navLink}> Conoce más </Link>
       </Card.Text>
 
-      <Card.Text style={cardText}>
+      <Card.Text className='d-flex flex-column' style={cardText}>
         Servicios
-        <Nav.Link href='/' style={navLink}> Todos los productos </Nav.Link>
+        <Link href='/' style={navLink}> Todos los productos </Link>
       </Card.Text>
 
       <Card.Text className='d-flex flex-column' style={cardText}>
         Hecho para
-        <span 
+        <span className='d-flex flex-column'
           style={{...navLink, color:'black', lineHeight:'160%'}}>
           Desarrollar habilidades en el uso de 
 
-          <Nav.Link href='https://nextjs.org/'  target='_blank'
-            style={{ fontSize:'0.85rem', color:'#8109b7',
+          <Link href='https://nextjs.org/'  target='_blank'
+            style={{ fontSize:'0.85rem', color:'#8109b7',textDecoration: 'none',
             }}
           >
             Next Js
-          </Nav.Link>
+          </Link>
         </span>
       </Card.Text>
     </Card.Title>

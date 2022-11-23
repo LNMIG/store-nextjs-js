@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '@context/appContext'
 import Image from 'next/image'
-import Nav from 'react-bootstrap/Nav'
+import Link from 'next/link'
 import Card from 'react-bootstrap/Card'
-
-import { useCart } from '@store'
 import avocadoIcon from '@public/avocado.jpg'
 import shoppingCartIcon from '@public/sesta.jpg'
 
@@ -28,15 +27,18 @@ const navLinkStyle = {
   justifyContent:'center',
   alignItems:'center',
   flexWrap:'nowrap',
+  textDecoration: 'none',
+  color: 'black',
 }
 
 
 export default function Navbar () {
+  const { useCart } = useContext(AppContext)
   const { count: cartCount } = useCart()
 
   return (
       <Card.Title style={cardTitle}>
-        <Nav.Link href="/" style={{...navLinkStyle, gap:'0.5rem'}}>
+        <Link href="/" style={{...navLinkStyle, gap:'0.5rem'}}>
             <Image
               src={avocadoIcon}
               alt='avocado image'
@@ -45,8 +47,8 @@ export default function Navbar () {
               style={imageStyle}
             />
             <Card.Text>Avo Store</Card.Text>
-        </Nav.Link>
-        <Nav.Link href="/cart" style={{...navLinkStyle, gap:'0.75rem'}}>
+        </Link>
+        <Link href="/cart" style={{...navLinkStyle, gap:'0.75rem'}}>
             <Image
               src={shoppingCartIcon}
               alt='sesta'
@@ -56,7 +58,7 @@ export default function Navbar () {
             />
             Canasta
             ({cartCount})
-        </Nav.Link>
+        </Link>
       </Card.Title>
   )
 }

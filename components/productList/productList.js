@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Carousel from 'react-bootstrap/Carousel'
-import Nav from 'react-bootstrap/Nav'
+import Link from 'next/link'
 
 const ProductList = ({ products }) => {
   return (
@@ -18,7 +18,7 @@ const ProductList = ({ products }) => {
               height: '500px',
             }}
           >
-            <Nav.Link href={`/product/${id}`}>
+            <Link href={`/product/${id}`}>
               <div>
                 <Image
                   src={image}
@@ -27,7 +27,7 @@ const ProductList = ({ products }) => {
                   height={200}
                 />
               </div>
-            </Nav.Link>
+            </Link>
             <Carousel.Caption>
               <h3>{name}</h3>
               <p>$ {price}</p>
@@ -42,54 +42,3 @@ const ProductList = ({ products }) => {
 }
 
 export default ProductList
-
-// return (
-//   <>
-//   {productList?.map(({ name, id, image, price}) => (
-//     <Nav.Link key={id} href={`/product/${id}`}>
-//       <Card
-//         header={name}
-//         image={image}
-//         meta={<Card.Meta style={{ color: 'dimgray' }}>{price}</Card.Meta>}
-//       />
-//     </Nav.Link>
-//   ))}
-//   </>
-// )
-
-// <Carousel
-// fade
-// variant='dark'
-// style={{ minHeight: '100%', border: '2px solid blue'}}
-// >
-// {(products.length > 0)
-// ? products.map(({ name, id, image, price}) => (
-//   <Carousel.Item key={id} className='d-block w-100'
-//     // style={{
-//     //   display:'flex',
-//     //   flexDirection: 'column',
-//     //   justifyContent:'space-between',
-//     //   alignItems: 'center',
-//     //   border:'2px solid red',
-
-//     // }}
-//   >
-//       <Image
-//         style={{
-//           border:'1px solid black',
-//         }}
-//         src={image}
-//         alt="oneAvo"
-//         width={300}
-//         height={300}
-//       />
-//       <Carousel.Caption>
-//         <h3>{name}</h3>
-//         <span>$ {price}</span>
-//       </Carousel.Caption>
-//   </Carousel.Item>
-// ))
-// : <div>Loading...</div>
-// }
-// </Carousel>
-// )
