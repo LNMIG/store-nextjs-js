@@ -1,4 +1,6 @@
-const data = {
+const initialState = {
+  cart: {},
+  data: {
     '2zd33b8c': {
       name: 'Maluma Hass Avocado',
       id: '2zd33b8c',
@@ -126,5 +128,5 @@ const data = {
       },
     },
   }
-
-  export default data
+}
+export default initialState

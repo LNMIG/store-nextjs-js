@@ -1,4 +1,6 @@
-import allData from './data'
+import initialState from './data'
+
+const allData = initialState.data
 
 class Database {
   constructor() {}
