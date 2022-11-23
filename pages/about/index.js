@@ -4,8 +4,6 @@ import Card from 'react-bootstrap/Card'
 import Image from "next/image"
 import { avoFacts } from '../../database/avoFacts'
 import avocados from '@public/images/avocados.jpg'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const card = {
   width: '60rem',

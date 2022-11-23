@@ -1,10 +1,9 @@
+import { useContext } from 'react'
 import Layout from '@components/layout/layout'
 import CartItemList from '@components/cartItemList/cartItemList'
 import CartSummary from '@components/cartSummary/cartSummary'
-import { useCart, useCartMutations } from '@store'
+import AppContext from '@context/appContext'
 import Card from 'react-bootstrap/Card'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const card = {
   width: '60rem',
@@ -20,9 +19,9 @@ const divContainer = {
 }
 
 const CartPage = () => {
-  const { items, count } = useCart()
-  const { removeFromCart } = useCartMutations()
-  console.log(items)
+  const { useCart, removeFromCart } = useContext(AppContext)
+  const { items, subTotal } = useCart()
+
   return (
     <div className='container' style={divContainer}>
       <Card style={card} >
@@ -30,7 +29,7 @@ const CartPage = () => {
           <div className='d-flex flex-column' style={{minHeight:'70%'}}>
             <CartItemList items={items} removeFromCart={removeFromCart} />
             <hr />
-            <CartSummary totalAmount={count} />
+            <CartSummary totalAmount={subTotal} />
           </div>
         </Layout>
       </Card>

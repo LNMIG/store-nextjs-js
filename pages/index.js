@@ -4,8 +4,6 @@ import Header from "@components/header/header"
 import ProductList from "@components/productList/productList"
 import Head from 'next/head'
 import Card from "react-bootstrap/Card"
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export const getServerSideProps = async () => {
   const response = await fetch('https://store-with-nextjs.vercel.app/api/avo')
