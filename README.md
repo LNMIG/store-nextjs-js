@@ -26,5 +26,5 @@ This is a not so fancy store front. Still, if you want to try it, you can find i
 * Clone this repository,
 * Run **npm install**,
 * Run **npm build**,
-* Run ** npm start**,
-* Whait until http://localhost:3000 shows up and use **Ctrl + mouse pointer + left mouse button** to open it in your browser.
+* Run **npm start**,
+* Whait until **http://localhost:3000** shows up and use **Ctrl + mouse pointer + left mouse button** to open it in your browser.
