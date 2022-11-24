@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting Started with NEXT
 
-## Getting Started
+This is a not so fancy store front. Still, if you want to try it, you can find it in the following link.
 
-First, run the development server:
+## Mini storefront's link
+* Once you click in the link you should wait 2 or 3 seconds until the data is loaded
+* Should you have any inconvenience, please let me know.
+* [Link to site](https://store-with-nextjs.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Project's Goals
+- Build a Mini Store using **React, Nextjs, JavaScript, HTML, Bootstrap**.
+- Use the latest version of **Next** and its features.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Statement
+- The DB is populated using static information.
+- React Context and useContext is used to feed components with the **state** and useful **functions**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies used:
+- [ ] React
+- [ ] Next
+- [ ] JavaScript
+- [ ] HTML
+- [ ] Bootstrap
+ 
+## How it works
+* Clone this repository,
+* Run **npm install**,
+* Run **npm build**,
+* Run ** npm start**,
+* Whait until http://localhost:3000 shows up and use **Ctrl + mouse pointer + left mouse button** to open it in your browser.
