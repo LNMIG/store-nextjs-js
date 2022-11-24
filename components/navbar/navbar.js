@@ -3,8 +3,8 @@ import AppContext from '@context/appContext'
 import Image from 'next/image'
 import Link from 'next/link'
 import Card from 'react-bootstrap/Card'
-import avocadoIcon from '@public/avocado.jpg'
-import shoppingCartIcon from '@public/sesta.jpg'
+import avocadoIcon from '@public/images/avocado.jpg'
+import shoppingCartIcon from '@public/images/sesta.jpg'
 
 const cardTitle = {
   padding:'1rem 1rem',

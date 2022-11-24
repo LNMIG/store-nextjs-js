@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import avocado from '@public/avocadoStore.webp'
+import avocado from '@public/images/avocadoStore.webp'
 import Card from "react-bootstrap/Card"
 
 const cardMain = {
